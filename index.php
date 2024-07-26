@@ -1,10 +1,14 @@
 <?php
 
 class Handphone {
-    private $merk, $tipe, $display, $warna, $harga, $processor;
+    public $merk, $tipe, $display, $warna, $harga, $processor;
 
-    function Processor(){
+    public function Processor(){
         return "Processor dari hp ini adalah " .$this->processor;
+    }
+
+    function hidupkanHp(){
+        return "menekan tombol power yang ada di hp";
     }
 
 }
@@ -17,6 +21,9 @@ class Iphone extends Handphone{
     function SmoothCamera(){
         echo "Kamera Jernih";
     }
+    function hidupkanHp(){
+        return "menekan tombol fingerPrint yang ada di hp";
+    } 
 }
 
 
@@ -36,6 +43,8 @@ $iphone->processor = "A16 Bionic";
 $iphone->warna = "Gold";
 $iphone->harga = "Rp.15.000.000,00";
 
-echo $iphone->merk();
-
+echo "Hp : ".$hp->hidupkanHp();
+echo "<br>";
+echo "<br>";
+echo "Iphone : ".$iphone->hidupkanHp();
 
