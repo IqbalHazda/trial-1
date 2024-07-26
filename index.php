@@ -1,7 +1,7 @@
 <?php
 
 class Handphone {
-    public $merk, $tipe, $display, $warna, $harga, $processor;
+    private $merk, $tipe, $display, $warna, $harga, $processor;
 
     function Processor(){
         return "Processor dari hp ini adalah " .$this->processor;
@@ -36,6 +36,6 @@ $iphone->processor = "A16 Bionic";
 $iphone->warna = "Gold";
 $iphone->harga = "Rp.15.000.000,00";
 
-echo $iphone->Processor();
+echo $iphone->merk();
 
 
