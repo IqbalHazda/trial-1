@@ -1,50 +1,41 @@
 <?php
 
-class Handphone {
-    public $merk, $tipe, $display, $warna, $harga, $processor;
+include "Animal.php";
 
-    public function Processor(){
-        return "Processor dari hp ini adalah " .$this->processor;
-    }
+$momo = new Kucing;
+$momo->jumlah_kaki = 4;
+echo "Momo adalah Kucing <br>";
+echo "Punya Kaki Sebanyak: " .$momo->jumlah_kaki."<br>";
+echo $momo->bisa_terbang."<br>";
+echo "Suaranya: " .$momo->bersuara()."<br>";
 
-    function hidupkanHp(){
-        return "menekan tombol power yang ada di hp";
-    }
+echo "<hr>";
 
-}
+$doggo = new Anjing;
+$doggo->jumlah_kaki = 4;
+echo "Doggo adalah Anjing <br>";
+echo "Punya Kaki Sebanyak: " .$doggo->jumlah_kaki."<br>";
+echo $doggo->bisa_terbang."<br>";
+echo "Suaranya: " .$doggo->bersuara()."<br>";
 
-class Vivo extends Handphone{
+echo "<hr>";
 
-}
+$zya = new Elang;
+$zya->jumlah_kaki = 2;
+echo "Zya adalah Elang <br>";
+echo "Punya Kaki Sebanyak: " .$zya->jumlah_kaki."<br>";
+echo $zya->bisa_terbang."<br>";
+echo "Suaranya: " .$zya->bersuara()."<br>";
 
-class Iphone extends Handphone{
-    function SmoothCamera(){
-        echo "Kamera Jernih";
-    }
-    function hidupkanHp(){
-        return "menekan tombol fingerPrint yang ada di hp";
-    } 
-}
+echo "<hr>";
 
+$masha = new Kucing;
+$masha->jumlah_kaki = 2;
+echo "Masha adalah Kucing <br>";
+echo "Punya Kaki Sebanyak: " .$masha->jumlah_kaki."<br>";
+echo $masha->bisa_terbang."<br>";
+echo "Suaranya: " .$masha->bersuara()."<br>";
 
-$hp = new Handphone;
-$hp->merk = "Vivo";
-$hp->tipe = "V2020SE";
-$hp->display = "20:9";
-$hp->processor = "Snapdragon 1000";
-$hp->warna = "Hitam";
-$hp->harga = "Rp.2.000.000,00";
+echo "<hr>";
 
-$iphone = new Iphone;
-$iphone->merk = "iphone";
-$iphone->tipe = "iphone 15 Promaghh";
-$iphone->display = "2556 x 1179";
-$iphone->processor = "A16 Bionic";
-$iphone->warna = "Gold";
-$iphone->harga = "Rp.15.000.000,00";
-
-echo "Hp : ".$hp->hidupkanHp();
-echo "<br>";
-echo "<br>";
-echo "Iphone : ".$iphone->hidupkanHp();
-
+?>
